@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>六十四卦占卜 | 周易智慧</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="loader-symbol">
+                <div class="loader-circle"></div>
+                <div class="loader-rays">
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                </div>
+            </div>
+            <div class="loader-text">周易智慧</div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="切換主題">
+        <span>🌙</span>
+    </button>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    <div class="overlay-texture"></div>
+    
+    <!-- 3D Floating Elements -->
+    <div class="floating-elements">
+        <div class="hexagram-3d" style="--delay: 0s; --x: 10%; --y: 15%; --z: -100px; --rotate: 15deg;">☰</div>
+        <div class="hexagram-3d" style="--delay: 2s; --x: 85%; --y: 25%; --z: -50px; --rotate: -10deg;">☲</div>
+        <div class="hexagram-3d" style="--delay: 4s; --x: 20%; --y: 80%; --z: -75px; --rotate: 25deg;">☵</div>
+        <div class="hexagram-3d" style="--delay: 6s; --x: 70%; --y: 75%; --z: -120px; --rotate: -20deg;">☳</div>
+        <div class="hexagram-3d" style="--delay: 8s; --x: 90%; --y: 85%; --z: -90px; --rotate: 30deg;">☴</div>
+        <div class="ornament" style="--x: 5%; --y: 30%; --rotate: 20deg;"></div>
+        <div class="ornament" style="--x: 95%; --y: 40%; --rotate: -15deg;"></div>
+        <div class="brush-stroke" style="--x: -5%; --y: 25%; --size: 20vw; --rotate: -5deg;"></div>
+        <div class="brush-stroke" style="--x: 85%; --y: 60%; --size: 25vw; --rotate: 15deg;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="scroll-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="subtitle">周易智慧・卦象呈現</h2>
+                    <h1 class="title">六十四卦占卜</h1>
+                    <div class="title-decoration">
+                        <span class="line"></span>
+                        <span class="symbol">☯</span>
+                        <span class="line"></span>
+                    </div>
+                    <p class="description">
+                        探索易經深奧智慧，感受卦象古老力量，指引生活方向。
+                        凝神靜思，觀象明理，揭示命運變化。
+                    </p>
+                </div>
+
+                <div class="yin-yang-container" data-aos="zoom-in" data-aos-delay="300">
+                    <div id="yin-yang" class="yin-yang" style="--rotation: 0">
+                        <div class="circle-dot"></div>
+                        <div class="circle-dot"></div>
+                    </div>
+                    <div class="yin-yang-glow"></div>
+                    <div class="orbiting-hexagrams">
+                        <div class="orbit">
+                            <div class="orbit-hexagram">☰</div>
+                        </div>
+                        <div class="orbit">
+                            <div class="orbit-hexagram">☷</div>
+                        </div>
+                        <div class="orbit">
+                            <div class="orbit-hexagram">☲</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divination Journey Section -->
+        <section class="journey-section">
+            <div class="journey-background"></div>
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>占卜之旅</h2>
+                    <p>易經智慧指引您探索生命奧秘</p>
+                </div>
+                
+                <div class="journey-steps" data-aos="fade-up" data-aos-delay="200">
+                    <div class="journey-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>心靈準備</h3>
+                            <p>專注於您的問題，放空思緒，準備接收宇宙能量</p>
+                        </div>
+                    </div>
+                    <div class="journey-connector"></div>
+                    <div class="journey-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>擲卦占問</h3>
+                            <p>通過我們的數位演算法模擬古老筮法，顯現卦象</p>
+                        </div>
+                    </div>
+                    <div class="journey-connector"></div>
+                    <div class="journey-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>解讀智慧</h3>
+                            <p>獲得經典卦辭與AI智能解讀，啟發思考與行動</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divination Section -->
+        <section class="divination-section">
+            <div class="container">
+                <div class="action-card" data-aos="fade-up">
+                    <div class="action-content">
+                        <h2>開始您的占卜之旅</h2>
+                        <p>集中您的精神，思考您的問題，讓古老的智慧為您指引方向。</p>
+                        <div class="action-buttons">
+                            <button id="cast-button" class="btn btn-primary">
+                                <span class="btn-text">開始占卜</span>
+                                <span class="btn-glow"></span>
+                            </button>
+                            <button id="reset-button" class="btn btn-secondary">
+                                重新卜卦
+                            </button>
+                            <button id="ai-button" class="btn btn-secondary">
+                                AI解說
+                            </button>
+                            <button id="about-button" class="btn btn-secondary">
+                                八卦說明
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-decoration">
+                        <div class="decoration-element"></div>
+                    </div>
+                </div>
+
+                <div id="result-container"></div>
+            </div>
+        </section>
+
+        <!-- Wisdom Section -->
+        <section class="wisdom-section">
+            <div class="wisdom-bg"></div>
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>易經智慧</h2>
+                    <p>古老哲學在現代生活中的指引</p>
+                </div>
+                
+                <div class="wisdom-cards">
+                    <div class="wisdom-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="wisdom-icon">☰</div>
+                        <h3>乾 - 天行健</h3>
+                        <p>君子以自強不息，追求卓越，堅守正道，開創未來。</p>
+                    </div>
+                    <div class="wisdom-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="wisdom-icon">☷</div>
+                        <h3>坤 - 厚德載物</h3>
+                        <p>君子以厚德載物，包容萬象，順應天時，滋養萬物。</p>
+                    </div>
+                    <div class="wisdom-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="wisdom-icon">☲</div>
+                        <h3>離 - 明照四方</h3>
+                        <p>君子以明慧智光，照亮前路，辨明是非，溫暖人心。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p class="footer-text">
+                    <span class="decorative-symbol">☰</span> 數據來源《周易》經文及易經卦象 <span class="decorative-symbol">☷</span><br>
+                    <span class="decorative-symbol">☰</span> AI可能會發生錯誤，請查核重要資訊 <span class="decorative-symbol">☷</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-scroll">
+                <h2>易經八卦說明</h2>
+                <div class="modal-decoration"></div>
+                <p>《易經》，又稱《周易》，是中國最古老的經典之一，也是研究哲學、預測學的重要著作。它由八卦與六十四卦組成，用以表達宇宙變化規律。</p>
+                
+                <h3>八卦基礎</h3>
+                <div class="trigrams-display">
+                    <div class="trigram">
+                        <div class="trigram-symbol">☰</div>
+                        <div class="trigram-name">乾 (天)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☷</div>
+                        <div class="trigram-name">坤 (地)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☳</div>
+                        <div class="trigram-name">震 (雷)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☶</div>
+                        <div class="trigram-name">艮 (山)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☲</div>
+                        <div class="trigram-name">離 (火)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☵</div>
+                        <div class="trigram-name">坎 (水)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☱</div>
+                        <div class="trigram-name">兌 (澤)</div>
+                    </div>
+                    <div class="trigram">
+                        <div class="trigram-symbol">☴</div>
+                        <div class="trigram-name">巽 (風)</div>
+                    </div>
+                </div>
+                
+                <h3>占卜方法</h3>
+                <p>本工具使用隨機數生成算法模擬傳統的筮法，分析動爻變化，呈現本卦與變卦的組合關係，幫助理解當前局勢與未來發展趨勢。</p>
+                
+                <h3>解讀指南</h3>
+                <p>解讀卦象時，應綜合考慮：</p>
+                <ul>
+                    <li>本卦與變卦的整體意義</li>
+                    <li>動爻所處位置與性質</li>
+                    <li>卦辭對具體情境的指導</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
